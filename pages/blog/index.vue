@@ -66,7 +66,7 @@ export default {
     dataLoaded: false;
   },
   mounted() {
-    vm.$forceUpdate();
+    this.$root.$forceUpdate();
   },
   components: {
     BlogWidget
