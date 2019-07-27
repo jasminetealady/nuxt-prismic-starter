@@ -18,7 +18,7 @@ export default {
     };
   },
   mounted() {
-    this.$router.go(0);
+    this.$router.go(1);
   }
 };
 </script>
