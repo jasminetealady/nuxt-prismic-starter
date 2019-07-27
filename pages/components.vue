@@ -44,6 +44,7 @@
 import ModalFull from "@/components/ModalFull";
 import ModalPartial from "@/components/ModalPartial";
 export default {
+  name: "components",
   components: { ModalFull, ModalPartial },
   data() {
     return {

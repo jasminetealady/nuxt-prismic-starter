@@ -62,8 +62,7 @@ import PrismicConfig from "~/prismic.config.js";
 import BlogWidget from "~/components/BlogWidget.vue";
 
 export default {
-  mounted() {},
-  name: "blog",
+  name: "Home",
   components: {
     BlogWidget
   },
