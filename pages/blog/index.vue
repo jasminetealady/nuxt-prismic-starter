@@ -65,11 +65,8 @@ export default {
   data() {
     dataLoaded: false;
   },
-  beforeMount() {
-    this.$root.$forceUpdate();
-  },
-  updated() {
-    this.$root.$forceUpdate();
+  mounted() {
+    this.$router.go(0);
   },
   components: {
     BlogWidget
