@@ -7,9 +7,7 @@
 </template>
 
 <script>
-export default {
-  name: "index"
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>

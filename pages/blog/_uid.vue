@@ -41,7 +41,6 @@ import QuoteSlice from "~/components/slices/QuoteSlice.vue";
 import ImageCaptionSlice from "~/components/slices/ImageCaptionSlice.vue";
 
 export default {
-  name: "blog-uid",
   components: {
     TextSlice,
     QuoteSlice,
