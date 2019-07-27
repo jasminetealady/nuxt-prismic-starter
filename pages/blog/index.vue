@@ -63,7 +63,7 @@ import BlogWidget from "~/components/BlogWidget.vue";
 
 export default {
   mounted() {},
-  name: "Home",
+  name: "blog",
   components: {
     BlogWidget
   },
