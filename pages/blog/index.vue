@@ -118,7 +118,10 @@ export default {
       };
     } catch (e) {
       // Returns error page
-      error({ statusCode: 404, message: "Page not found" });
+      error({
+        statusCode: 404,
+        message: "Blog posts could not be retrieved at this time."
+      });
     }
   }
 };

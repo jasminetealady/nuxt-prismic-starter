@@ -7,16 +7,14 @@
       <nuxt-link class="padding-1" to="/components">Components</nuxt-link>
     </nav>
     <nuxt />
-    <!-- <footer-prismic/> -->
   </div>
 </template>
 
 <script>
-import FooterPrismic from "~/components/FooterPrismic.vue";
 
 export default {
   components: {
-    FooterPrismic
+
   },
   head() {
     return {
