@@ -1,8 +1,8 @@
 {
-  "name": "blog-nuxt",
+  "name": "nuxt-prismic-starter",
   "version": "1.0.0",
-  "description": "A simple blog for Nuxt and Vue",
-  "author": "Phil Snow",
+  "description": "A starter site for Nuxt and Prismic",
+  "author": "Phil Snow and Razelle McCarrick",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
@@ -18,7 +18,8 @@
     "nuxt": "^2.4.0",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^2.0.1",
-    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt"
+    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git#nuxt",
+    "vue-mq": "^1.0.1"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
