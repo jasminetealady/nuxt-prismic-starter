@@ -65,7 +65,10 @@ export default {
   data() {
     dataLoaded: false;
   },
-  mounted() {
+  beforeMount() {
+    this.$root.$forceUpdate();
+  },
+  updated() {
     this.$root.$forceUpdate();
   },
   components: {
