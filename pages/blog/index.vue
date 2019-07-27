@@ -2,12 +2,12 @@
   <div :class="$mq" class="page">
     <article class="flex-center-column">
       <h1>Blog</h1>
-      <!-- <input
+      <input
         class="input margin-bottom-2"
         v-model="searchQuery"
         :keypress="filterBySearch(searchQuery)"
         placeholder="Search for a Post"
-      />-->
+      />
       <!-- Button to edit document in dashboard -->
       <prismic-edit-button :documentId="documentId" />
       <div class="blog-avatar" :style="{ backgroundImage: 'url(' + image + ')' }"></div>
@@ -62,6 +62,9 @@ import PrismicConfig from "~/prismic.config.js";
 import BlogWidget from "~/components/BlogWidget.vue";
 
 export default {
+  data() {
+    dataLoaded: false;
+  },
   components: {
     BlogWidget
   },
@@ -70,20 +73,20 @@ export default {
       searchQuery: ""
     };
   },
-  // methods: {
-  //   filterBySearch(searchQuery) {
-  //     var Prismic = require("prismic-javascript");
+  methods: {
+    filterBySearch(searchQuery) {
+      var Prismic = require("prismic-javascript");
 
-  //     Prismic.getApi("https://razelle.prismic.io/api/v2")
-  //       .then(function(api) {
-  //         return api.query([
-  //           Prismic.Predicates.at("document.type", "post"),
-  //           Prismic.Predicates.fulltext("document", searchQuery)
-  //         ]);
-  //       })
-  //       .then(response => (this.posts = response.results));
-  //   }
-  // },
+      Prismic.getApi("https://razelle.prismic.io/api/v2")
+        .then(function(api) {
+          return api.query([
+            Prismic.Predicates.at("document.type", "post"),
+            Prismic.Predicates.fulltext("document", searchQuery)
+          ]);
+        })
+        .then(response => (this.posts = response.results));
+    }
+  },
   head() {
     return {
       title: "Prismic Nuxt.js Blog"
@@ -114,6 +117,7 @@ export default {
         posts: blogPosts.results,
         image: homepageContent.image.url
       };
+      this.dataLoaded = true;
     } catch (e) {
       // Returns error page
       error({
