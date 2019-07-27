@@ -62,12 +62,6 @@ import PrismicConfig from "~/prismic.config.js";
 import BlogWidget from "~/components/BlogWidget.vue";
 
 export default {
-  data() {
-    dataLoaded: false;
-  },
-  mounted() {
-    this.$router.go(0);
-  },
   components: {
     BlogWidget
   },
@@ -120,7 +114,6 @@ export default {
         posts: blogPosts.results,
         image: homepageContent.image.url
       };
-      this.dataLoaded = true;
     } catch (e) {
       // Returns error page
       error({
