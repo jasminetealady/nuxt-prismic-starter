@@ -10,12 +10,15 @@
 </template>
 <script>
 export default {
-  props: ['error'],
-  layout: 'default',
-  head () {
+  props: ["error"],
+  layout: "default",
+  head() {
     return {
-      title: 'Prismic Nuxt.js Blog',
-    }
+      title: "Prismic Nuxt.js Blog"
+    };
   },
-}
+  mounted() {
+    this.$router.go(0);
+  }
+};
 </script>
